@@ -36,3 +36,4 @@ public:
         return miniSpeed;
     }
 };
+//https://leetcode.com/problems/minimum-speed-to-arrive-on-time/solutions/1226468/binary-answer-cheat-sheet/
