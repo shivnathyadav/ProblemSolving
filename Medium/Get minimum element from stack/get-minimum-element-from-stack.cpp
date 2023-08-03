@@ -15,12 +15,12 @@ public :
     void push(int);
 };
 */
-
+ // push two element at a time top one is minimum element and bottom is maximum element
 class Solution{
     int minEle;
     stack<int> s;
     public:
-    
+     
        /*returns min element from stack*/
        int getMin(){
            
