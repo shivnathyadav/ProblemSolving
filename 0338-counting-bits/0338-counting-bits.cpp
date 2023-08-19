@@ -10,18 +10,15 @@ public:
             return vec;
         }
         for(int i = 2; i <= n; i++){
-            int k = log2(i);
-            if(pow(2,k)==i){
-                vec[i] = 1 ;
-                cout<<i<<" a "<<vec[i]<<endl;
-            }
-            else{  
-          //          cout<<pow(2,(int)log2(i))<<" c "<<(i-pow(2,(int)log2(i)))<<endl;
-                    vec[i] += vec[pow(2,(int)log2(i))]+vec[i-pow(2,(int)log2(i))];
-                    
-             cout<<i<<" b "<<vec[i]<<endl;    
-            }
-
+          int count = 0;
+          int num = i;
+          while(num>0){
+                if(num%2==1){
+                   count += 1;   
+              }
+                 num = num/2;
+          }
+          vec[i]=count;
         }
         return vec;
     }
