@@ -9,8 +9,21 @@ using namespace std;
 
 class Solution{
 public:
-    int solve(int arr[],int n,int s)
+    
+    int equalPartition(int n, int arr[])
     {
+        // code here
+        
+        int sum=0;
+        for(int i=0;i<n;i++)
+        {
+            sum+=arr[i];
+        }
+        if(sum%2!=0)
+        {
+            return 0;
+        }
+        int s = sum/2;
         vector<vector<int>>dp(n+1,vector<int>(s+1,-1));
         int i,j;
         for(j=0;j<=s;j++)
@@ -36,21 +49,6 @@ public:
             }
         }
         return dp[n][s];
-    }
-    int equalPartition(int N, int arr[])
-    {
-        // code here
-        int i;
-        int sum=0;
-        for(i=0;i<N;i++)
-        {
-            sum+=arr[i];
-        }
-        if(sum%2!=0)
-        {
-            return 0;
-        }
-        return solve(arr,N,sum/2);
     }
 };
 
