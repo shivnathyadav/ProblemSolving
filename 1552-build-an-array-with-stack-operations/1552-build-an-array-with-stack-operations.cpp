@@ -20,7 +20,7 @@ public:
         while(j>=1){
             vec.push_back("Pop");
             vec.push_back("Push");
-            j -= 1;
+                j -= 1;
         }
         reverse(vec.begin(),vec.end());
         return vec;
